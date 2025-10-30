@@ -1,5 +1,5 @@
 MCU=atmega32
-F_CPU=1000000UL
+F_CPU=8000000UL
 
 CC=avr-g++
 OBJCOPY=avr-objcopy
@@ -8,7 +8,7 @@ CFLAGS=-mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -g -std=c++17 -I./src
 OBJDIR=bin
 TARGET=$(OBJDIR)/main
 AVRDUDE=avrdude
-AVRDUDE_FLAGS=-c usbasp -p $(MCU)
+AVRDUDE_FLAGS=-c usbasp -p $(MCU) -B10
 
 SRC=main.cpp src/lcd/lcd.cpp
 OBJ=$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))

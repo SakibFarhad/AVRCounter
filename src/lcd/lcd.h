@@ -4,19 +4,19 @@
 
 #if (!defined LCD_DDR || !defined LCD_PORT)
 #warning "Please define LCD_DDR and LCD_PORT"
-#define LCD_DDR DDRB
-#define LCD_PORT PORTB
+#define LCD_DDR DDRC
+#define LCD_PORT PORTC
 #endif
 
 #ifndef LCD_RS
 #warning "LCD Using default pin"
-#define LCD_RS 0
+#define LCD_RS 2
 #define LCD_RW 1
-#define LCD_EN 2
-#define LCD_D0 4
-#define LCD_D1 5
-#define LCD_D2 6
-#define LCD_D3 7
+#define LCD_EN 3
+#define LCD_D4 4
+#define LCD_D5 5
+#define LCD_D6 6
+#define LCD_D7 7
 #endif
 
 #define LCD_COL_COUNT 16

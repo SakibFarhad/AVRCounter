@@ -1,1 +1,1 @@
-# avr-template
+# avr-counter
